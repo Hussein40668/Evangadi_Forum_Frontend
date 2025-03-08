@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "../../axiosConfig";
 
 const Login = () => {
@@ -25,7 +25,7 @@ const Login = () => {
       });
       alert('User logged in successfully');
       localStorage.setItem('token', data.token);
-      // navigate('/');
+       navigate('/');
       console.log(data);
     } catch (error) {
       alert(error?.response?.data?.msg);
@@ -52,6 +52,7 @@ const Login = () => {
           <button type="submit">Login</button>
         </div>
       </form>
+      <Link to="/register">Register</Link>
     </section>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 import axios  from "../../axiosConfig";
 
 const Register = () => {
@@ -82,6 +82,7 @@ alert ('User registered successfully, please login to continue');
         
 
       </form>
+       <Link to="/login">Login</Link>
     </section>
   );
 }
